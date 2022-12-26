@@ -1,17 +1,16 @@
 using api.DTOs.CharacterDTO;
 
-namespace api.Services.CharaterService
+namespace api.Services.CharaterService;
+
+public interface ICharacterService
 {
-    public interface ICharacterService
-    {
-        Task<ServiceResponse<List<GetCharacterDTO>>> GetAll();
+    Task<ServiceResponse<List<GetCharacterDTO>>> GetAll();
 
-        Task<ServiceResponse<GetCharacterDTO>> GetById(int Id);
+    Task<ServiceResponse<GetCharacterDTO>> GetById(int Id);
 
-        Task<ServiceResponse<List<GetCharacterDTO>>> Add(AddCharacterDTO character);
+    Task<ServiceResponse<List<GetCharacterDTO>>> Add(AddCharacterDTO character);
 
-        Task<ServiceResponse<GetCharacterDTO>> Update(UpdateCharacterDTO character);
+    Task<ServiceResponse<GetCharacterDTO>> Update(UpdateCharacterDTO character);
 
-        Task<ServiceResponse<List<GetCharacterDTO>>> Delete(int Id);
-    }
+    Task<ServiceResponse<List<GetCharacterDTO>>> Delete(int Id);
 }

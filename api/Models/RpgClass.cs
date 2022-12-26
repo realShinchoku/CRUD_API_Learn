@@ -1,12 +1,11 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace api.Models
+namespace api.Models;
+
+[JsonConverter(typeof(JsonStringEnumConverter))]
+public enum RpgClass
 {
-    [JsonConverter(typeof(JsonStringEnumConverter))]
-    public enum RpgClass
-    {
-        Knight = 1,
-        Mage = 2,
-        Cleric = 3
-    }
+    Knight = 1,
+    Mage = 2,
+    Cleric = 3
 }
